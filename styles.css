@@ -1,0 +1,174 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  color: white;
+}
+footer{
+  position: fixed;
+  bottom:0;
+  color:white;
+  text-align: center;
+  width:100%;
+  margin:5px;
+}
+.header{
+
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(black2.jpg) ;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container{
+  max-width: 1200px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
+.navbar{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content:space-between;
+  padding: 10px 0;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+nav ul li a:hover{
+  border-bottom: 2px solid white;
+}
+.user{
+  
+  display: block;
+  margin-left: 160px;;
+  margin-right: auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.aa:hover{
+  box-shadow: 0 10px 20px rgba(248, 247, 247, 0.253), 0 6px 6px rgba(248, 247, 247, 0.253);
+}
+.con{
+  margin-left: 30px;
+  max-width: 600px;
+  margin-top: 8%;
+  color:white;
+  
+}
+h1{
+  font-size: 56px;
+  line-height: 60px;
+  margin:15px 5px;
+}
+h2{
+  font-size: 40px;
+}
+.slider{
+  height: 400px;
+  width: 600px;
+  margin-left: 50%;
+  margin-top: -28%;
+  overflow: hidden;
+}
+.slider figure{
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: 12s slider infinite; 
+}
+.slider figure img{
+  float: left;
+}
+@keyframes slider{
+  0%{
+    left: 0;
+  }
+  23%{
+    left: 0;
+  }
+  33%{
+    left: -100%;
+  }
+  56%{
+    left: -100%;
+  }
+  66%{
+    left: -200%
+  }
+  89%{
+     left: -200%;
+  }
+}
+.edu{
+  background: rgba(0,0,0,0.7);
+  margin: 10% 70px;
+  margin-right:200px;
+}
+.edu h2{
+  margin: 50px 0;
+}
+.edu h3{
+  margin-top: 50px;
+  margin-bottom: 10px;;
+}
+.edu h4{
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+p{
+  line-height: 25px;
+  margin: 10px 0;
+}
+.btn{
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.box{
+  display: flex;
+  margin-top: 80px;;
+}
+.gallery img {
+  width: 250px;
+  height: 250px;
+}
+div.desc {
+  padding: 10px;
+  text-align: center;
+  max-width: 230px;
+  
+}
+div.gallery{
+  margin-right: 60px;
+  border: 1px solid #000;
+}
+div.gallery:hover {
+  border: 1px solid #777;
+}
+.learn img{
+  width: 150px;
+  height:150px;
+}
+.learn{
+  margin-right: 10px;
+  border:1px solid #000;
+}
+.learn:hover{
+  border: 1px solid #777;
+}
