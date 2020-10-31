@@ -36,12 +36,15 @@
 
         <form class="aa" name="aa">
             <h1>Semester Fee Calculator (CSE)</h1>
-            <p>Total Credits</p><input type="text" class="in" name="tx1">
-            <p>Waiver (%)</p><input type="text" class="in" name="tx2"><br>
+            <p>Total Credits(regular)</p><input type="text" class="in" name="tx1" required>
+            <p>Waiver (%)-regular</p><input type="text" class="in" name="tx2" required>
+            <p>Total Credits(Retake)</p><input type="text" class="in" name="tx4" required>
+            <p>Waiver (%)-Retake</p><input type="text" class="in"  name="tx5" required>
+            <br>
             <input id="bb" type="button"  onclick="document.aa.tx3.value=eval( 
-                ((((document.aa.tx1.value)*1650)*(1-((document.aa.tx2.value)/100)))+((document.aa.tx2.value+1)/(document.aa.tx2.value+1))*((document.aa.tx1.value)/(document.aa.tx1.value))*3600)
+                ((((document.aa.tx1.value)*1650)*(1-((document.aa.tx2.value)/100)))+(((document.aa.tx4.value)*1650)*(1-((document.aa.tx5.value)/100)))+3600)
               )+' /='"value="=">
-              <input id="bb" type="button"  onclick="document.aa.tx1.value ='',document.aa.tx2.value ='',document.aa.tx3.value =''"value="Clear">
+              <input id="bb" type="button"  onclick="document.aa.tx4.value ='',document.aa.tx5.value ='',document.aa.tx1.value ='',document.aa.tx2.value ='',document.aa.tx3.value =''"value="Clear">
             <p>Total Amount</p><input type="text" class="in" name="tx3">
         </form>
 
