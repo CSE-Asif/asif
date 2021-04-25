@@ -17,7 +17,7 @@ html{
 }
 
 body{
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(black2.jpg) ;
+  background-image: url("dark3.jpg");
   background-size: cover;
   background-attachment: fixed;
   min-width:1100px;
