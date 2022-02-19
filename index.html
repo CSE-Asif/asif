@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<title>Khadem Mohammad Asif-uz-zaman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+.sadd{
+  font-size:large;
+}
+p{
+  font-size:medium;
+}
+.skills-section{
+padding-top: 20px;
+}
+
+.skills-header{
+text-align: center;
+font-family: 'PT Serif', serif;
+padding: 1rem;
+position: relative;
+}
+
+.skills-header:after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 100px;
+height: 4px;
+
+border-radius: 2px;
+}
+
+.skills-container{
+display: grid;
+grid-tempLate-columns: repeat(5, 1fr);
+justify-content:center;
+align-items:center;
+text-align: center;
+grid-gap:1rem;
+padding: 1rem 80px;
+font-size: 1.2rem;
+}
+.skills-box{
+padding: 1rem;
+color: #000;
+cursor:pointer;
+}
+
+.skills-box:hover .skills-img{
+transform: translateX(-20px);
+}
+
+.skills-title{
+display:flex;
+flex-direction: column;
+align-items:center;
+padding: 0.5rem;
+margin-bottom: 0.5rem;
+position: relative;
+}
+
+.skills-title:after{
+content: '';
+position:absolute;
+bottom: 0;
+
+width:20px;
+height:4px;
+border-radius: 2px 0 0 2px;
+
+transition: .5s;
+}
+
+.skills-title:before{
+content: '';
+position:absolute;
+bottom: 0;
+left: 50%;
+width:100px;
+height:4px;
+border-radius: 0 2px 2px 0;
+
+}
+
+.skills-icons{
+width:50px;
+z-index:2;
+}
+
+.skills-img{
+width:90px;
+height:90px;
+position: relative;
+border-radius: 45px;
+background-color: #fff;
+display:flex;
+justify-content:center;
+align-items:center;
+transition: .5s;
+}
+
+.skills-img:after{
+content: '';
+position:absolute;
+top:0;
+left: 0;
+width:50%;
+height:90px;
+background: rgba(100, 100, 100, 0.5);
+border-radius: 45px 0 0 45px;
+}
+.skills-title h3{
+color: #333;
+margin-top: 0.5rem;
+}
+@media screen and (max-width:990px){
+ .skills-container{
+ grid-tempLate-columns: repeat(2, 1fr);
+ padding: 2rem 50px;
+ }
+}
+
+@media screen and (max-width:650px){
+ .skills-container{
+ grid-tempLate-columns:2fr;
+ padding: 2rem 50px;
+ }
+}
+.img1{
+  display: none;
+}
+.abt{
+  font-family: 'PT Serif', serif;
+}
+.abt2{
+  font-family:  "Raleway";
+  font-size:large;
+}
+.abt3{
+  font-family:  "Raleway";
+  font-size:x-large;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+  background-color: #E3E3E3;
+  height:65vh;
+  padding-top: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.flex-item-left {
+  
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
+
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+  .gifimg{
+    width: 100%;
+  }
+  .img1{
+    display: block;
+  }
+  .flex-container {
+    height: auto;
+  }
+  p{
+    font-size:xx-large;
+  }
+  .sadd{
+    font-size:large;
+  }
+  .adiv{
+    min-height: 180px;
+  }
+  .mail1{
+    display: none;
+  }
+  a{
+    font-size: larger;
+  }
+  .x3{
+    width: 200px;
+    font-size:large;
+  }
+  .abt3{
+    font-size:xx-large;
+  }
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+<body class="w3-light-gray w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;padding-left: 27px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <br>
+    <img src="asif sami.jpg" style="width:45%;" class="w3-round"><br>
+    <h4><b>Khadem Mohammad Asif-uz-zaman</b></h4>
+    <p class="w3-text-grey mail1">asifsami2000@gmail.com</p>
+  </div>
+  <div class="w3-bar-block">
+    <!-- <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>  -->
+    <a href="#x1" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#x2" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cogs fa-fw w3-margin-right"></i>SKILLS</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <p>
+    <form action="https://drive.google.com/file/d/13K9-V09glQXWPmfCe4kjmlFx1GsblTxr/view?usp=sharing">
+      <button type="submit" class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom x3">
+        <i class="fa fa-download w3-margin-right">Download Resume</i>
+      </button>
+    </form>
+  </p>
+  <div class="w3-panel w3-large">
+    <a class="fa fa-facebook-official w3-hover-opacity abc" href="https://www.facebook.com/asif.sami.359"></a>
+    <a class="fa fa-github w3-hover-opacity abc" href="https://github.com/CSE-Asif"></a>
+    
+    <a class="fa fa-linkedin w3-hover-opacity abc" href="https://www.linkedin.com/in/khadem-mohammad-asif-uz-zaman-2229421b7/"></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <center><img src="asif sami.jpg" style="width:45%;" class="w3-round img1"></center><br>
+    <h1 id="x1"><b>Khadem Mohammad Asif-uz-zaman</b></h1>
+    <h3><b>Software Developer | Sylhet, Bangladesh | asifsami2000@gmail.com</b></h3>
+    <br>
+    </div>
+
+   <br>
+   <div class="flex-container">
+     
+    <div class="flex-item-left" >
+      <h2><b class="abt">About Me</b></h2>
+    <p class="abt3">I am Khadem Mohammad Asif-uz-zaman from Sylhet, Bangladesh. I have completed my Bsc. Engineering in CSE from North East Unversity Bangladesh. Now I am working as a Software Developer(PHP) and seeking for entry level jobs. I am also looking for an opportunity to pursue my higher study.</p>
+    
+    </div>
+    <div class="flex-item-right">
+      <img class="gifimg" src="giphy2.gif" alt="">
+    </div>
+  </div>
+    
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding" style="margin-bottom: 50px;">
+    <h2 class="abt" style="margin-left: 10px;"><b> Education</b></h2>
+    <br>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.neub.edu.bd/"><img src="img1.png" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>NORTH EAST UNIVERSITY BANGLADESH</b></p>
+        <p>BACHELOR OF SCIENCE<br>Computer Science & Engineering (CSE)</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://mccollege.edu.bd/"><img src="img2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>M.C. COLLEGE, Sylhet.</b></p>
+        <p>Higher Secondary School Certificate<br>Year: 2017</p><br>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <a href="https://www.sohopathi.com/blue-bird-high-school-and-college/"><img src="img3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>BLUE BIRD SCHOOL & COLLEGE , Sylhet.</b></p>
+        <p>Secondary School Certificate<br>Year: 2015</p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+
+  
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h2 class="abt" id="x2"><b> Technical Skills</b></h2>
+    
+    
+    <div>
+      <div class="skills-section">
+        <div class="skills-header">
+         <h3><b>Programming Languages</b></h3>   
+         </div>
+         <div class="skills-container">
+           
+          <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png"     alt="" class="skills-icons">
+            </div>
+             <h3>C</h3>
+            </div>
+            
+           </div>
+           
+           
+            <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>C++</h3>
+            </div>
+            
+           </div>
+           
+           
+            <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>PYTHON</h3>
+            </div>
+            
+           </div>
+           
+              <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>PHP</h3>
+            </div>
+            
+           </div>
+           
+              <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>Javascript</h3>
+            </div>
+            
+           </div>
+           
+              <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="http://assets.stickpng.com/images/58480979cef1014c0b5e4901.png" alt="" class="skills-icons">
+            </div>
+            <h3>JAVA</h3>
+            </div>
+            
+           </div>
+           
+           
+           </div>
+        
+         </div>
+    </div>
+    
+    
+    <div>
+      <div class="skills-section">
+        <div class="skills-header">
+         <h3><b>Web Technologies</b></h3>   
+         </div>
+         <div class="skills-container">
+           
+          <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png"     alt="" class="skills-icons">
+            </div>
+             <h3>HTML</h3>
+            </div>
+            
+           </div>
+           
+           
+            <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>CSS</h3>
+            </div>
+              
+           </div>
+           
+           
+            <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/2048px-JSON_vector_logo.svg.png" alt="" class="skills-icons">
+            </div>
+            <h3>JSON</h3>
+            </div>
+            
+           </div>
+           
+              <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" class="skills-icons">
+            </div>
+            <h3>BOOTSTRAP</h3>
+            </div>
+            
+           </div>
+           </div>
+         </div>
+    </div>
+
+
+
+
+
+
+    <div>
+      <div class="skills-section">
+        <div class="skills-header">
+         <h3><b>Databases</b></h3>   
+         </div>
+         <div class="skills-container">
+           
+          <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png"     alt="" class="skills-icons">
+            </div>
+             <h3>MySQL</h3>
+            </div>
+           
+           </div>
+           
+           
+            <div class="skills-box">
+           <div class="skills-title">
+           <div class="skills-img">
+            <img src="https://logos-world.net/wp-content/uploads/2020/09/Oracle-Symbol.png" alt="" class="skills-icons">
+            </div>
+            <h3>ORACLE</h3>
+            </div>
+            
+           </div>
+           </div>
+        
+         </div>
+    </div>
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div>
+      <h2 class="abt" ><b> Research Interests</b></h2>
+      <div class="flex-item-left">
+        <h3><b class="abt">Undergraduate Research</b></h3>
+      <p >Drawing trajectory generation for partial drawing by 2D shape completion.</p>
+      
+      </div>
+    </div>
+<br><br>
+
+    
+
+    <div>
+      <h2 class="abt" ><b> Honors & awards</b></h2>
+      <div class="flex-item-left">
+        <h3><b class="abt">Champion in Programming Contest.</b></h3>
+      <p > NEUB ICT FEST-2019.<br>North East University Bangladesh</p>
+      
+      </div>
+    </div>
+
+    <br><br>
+
+    
+
+    <div>
+      <h2 class="abt" ><b>Co-curricular Activities</b></h2>
+      <div class="flex-item-left">
+        <h3><b class="abt">Executive Member</b></h3>
+      <p > NEUB CSE Society 2019-2020.<br>North East University Bangladesh</p>
+      
+      </div>
+    </div>
+
+
+
+
+  </div>
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey " style="height:160px">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p class="sadd">asifsami2000@gmail.com</p>
+      </div>
+      <div class="w3-third w3-teal adiv" style="height:160px">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p class="sadd">"Khadem Mahal", 38 uttaran,R/A,West Sheikhghat, Sylhet-3100, Bangladesh</p>
+      </div>
+      <div class="w3-third w3-dark-grey " style="height:160px">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p class="sadd">+880 1929252671</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  
+  
+  <div class="w3-black w3-center w3-padding-24"><a href="https://cse-asif.github.io/asif" title="W3.CSS" target="_blank" class="w3-hover-opacity">©2020 Asif. All rights reserved.</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
