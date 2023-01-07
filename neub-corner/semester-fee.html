@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../asif.png" type="image/gif" sizes="16x16">
+<title>Semester Fee Calculator(NEUB)</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+p{
+  font-size: large;
+}
+footer{
+  height: 70px;
+  background-color: rgb(157, 155, 185);
+  margin-bottom: 0;
+  padding-top: 25px;
+  text-align: center;
+}
+.cop{
+  color: black;
+  font-size: large;
+}
+body{
+  background: linear-gradient(#80c5e0, #9198e5);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: large;
+}
+
+label {
+  
+  display: inline-block;
+}
+
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ffffffc2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-top: 20px;
+  font-size: large;
+}
+
+.col-75 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .col-25, .col-75, input[type=button] {
+    width: 100%;
+    
+  }
+}
+
+/* Create two equal columns that floats next to each other */
+@media screen and (min-width: 801px) {
+.row2 {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+.column2 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  align-items: stretch;
+}
+.column3 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  align-items: stretch;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column2 {
+    width: 100%;
+  }
+  .row2 {
+  width: 100%;
+  margin: auto;
+}
+.column3{
+  padding: 20px;
+  margin-top: 50px;
+}
+}
+</style>
+</head>
+<body>
+
+<center>
+  <u><h1>Semester Fee calculator(NEUB)</h1></u>
+  <h2>For Summer-2022 OR Older sessions.</h2>
+  <p>For Spring-2023 or subsequent sessions, <a href="semester-fee2.html">Click here</a>.</p>
+
+</center>
+
+<div class="row2">
+  <div class="column2" style="background-color:#aaa;">
+    <h2></h2>
+
+
+    <div class="container">
+      <form action="">
+        <h3 style="color: red; display: none;" id="error">*** Please, Fill up all the fields.</h3>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Select Program</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country" required>
+              <option value="" selected="true" disabled="disabled">--Please Select an Option--</option>
+              <option value="B.Sc. (Engg.) in CSE">B.Sc. (Engg.) in CSE</option>
+              <option value="BA (Hons.) in English">BA (Hons.) in English</option>
+              <option value="LL.B (Hons.)">LL.B (Hons.)</option>
+              <option value="BBA">BBA</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Total Credits(Regular)</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="fname" name="firstname" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Waiver(%)-Regular</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="waiverr" name="f" required>
+          </div>
+        </div>
+<br>
+        <div class="row">
+          <div class="">
+            <label for="fname" style="font-size: large;">Do you have any retake Course?</label>
+            <input type="radio" id="r1" onclick="check(this.value)" name="gender" value="Yes" required>Yes
+            <input type="radio" id="r2" onclick="check(this.value)" name="gender" value="No">No
+          </div>
+          
+        </div>
+
+        <div id="retake" style="display: none;">
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Total Credits(Retake)</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="lname" name="lastname"  required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Waiver(%)-retake</label>
+          </div>
+          <div class="col-75">
+            <input type="number" id="waiverre" name="f" required>
+          </div>
+        </div>
+      </div>
+        <br>
+        <div class="row">
+          <input type="button" value="Submit" onclick="myFunction()">
+        </div>
+      </form>
+    </div>
+    
+
+
+  </div>
+  <div class="column3" style="background-color:#bbb;">
+    
+    <div id="wr" style="display: none;">
+      <h2 id="ttl"></h2>
+      <h3 id="w1"></h3>
+      <h3 id="w2"></h3>
+      <h3 id="w3"></h3>
+      <h3 id="rf"></h3>
+      <h3 id="w4"></h3>
+      <h3 id="w5"></h3>
+      <br>
+      <h2 id="w6"></h2>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function check(browser) {
+    document.getElementById("wr").style.display="none";
+    if(browser=="Yes"){
+      document.getElementById('retake').style.display="block";
+    }
+    else{
+      document.getElementById('retake').style.display="none";
+    }
+  }
+   
+  function myFunction() {
+    var rate_value="";
+    if (document.getElementById('r1').checked) {
+      rate_value = document.getElementById('r1').value;
+      // document.getElementById('retake').style.display="block";
+    }
+    else if (document.getElementById('r2').checked){
+      rate_value = document.getElementById('r2').value;
+      // document.getElementById('retake').style.display="none";
+    }
+    var fname=document.getElementById("fname").value;
+    var lname=document.getElementById("lname").value;
+    var waiverr=document.getElementById("waiverr").value;
+    var waiverre=document.getElementById("waiverre").value;
+    var country=document.getElementById("country").value;
+    if(fname=="" || country=="" || rate_value =="" || waiverr==""){
+      document.getElementById("error").style.display="block";
+      document.getElementById("wr").style.display="none";
+      document.getElementById("error").scrollIntoView({behavior: 'smooth'});
+    }
+    else{
+      var percredit;
+      switch(country){
+        case "B.Sc. (Engg.) in CSE": percredit=1650; labfee=1500; break;
+        case "BA (Hons.) in English": percredit=1450; labfee=0; break;
+        case "LL.B (Hons.)": percredit=1500; labfee=0; break;
+        case "BBA": percredit=2150; labfee=0; break;
+      }
+      var semesterfee=3750;
+      var libraryfee=150;
+
+      if(rate_value=="Yes"){
+        if(lname=="" || waiverre==""){
+          document.getElementById("error").style.display="block";
+          document.getElementById("wr").style.display="none";
+          document.getElementById("error").scrollIntoView({behavior: 'smooth'});
+        }
+        else{
+          var tutionfee=((percredit*fname)/100)*(100-waiverr);
+          var retakefee=((percredit*lname)/100)*(100-waiverre);
+          var total= tutionfee+semesterfee+labfee+libraryfee+retakefee;
+          document.getElementById("error").style.display="none";
+          document.getElementById("wr").style.display="block";
+          document.getElementById("ttl").innerHTML="Calculated Semester Fee";
+          document.getElementById("w1").innerHTML="Program : " + country;
+          document.getElementById("w2").innerHTML="Tuition Fee : " + tutionfee;
+          document.getElementById("rf").innerHTML="Retake Fee : " + retakefee;
+          document.getElementById("w3").innerHTML="Semester/ S.A $ D. Fee : " + semesterfee;
+          if(labfee!=0){
+            document.getElementById("w4").innerHTML="Laboratory Fee : " + labfee;
+          }else{
+            document.getElementById("w4").innerHTML="";
+          }
+          document.getElementById("w5").innerHTML="Library Semester Fee : " + libraryfee;
+          document.getElementById("w6").innerHTML="Total Amount Payable : " + total;
+          document.getElementById("ttl").scrollIntoView({behavior: 'smooth'});
+          // display for retake
+
+
+        }
+      }
+      else{
+        var tutionfee=((percredit*fname)/100)*(100-waiverr);
+        var total= tutionfee+semesterfee+labfee+libraryfee;
+        document.getElementById("error").style.display="none";
+        document.getElementById("wr").style.display="block";
+        document.getElementById("ttl").innerHTML="Calculated Semester Fee";
+        document.getElementById("w1").innerHTML="Program : " + country;
+        document.getElementById("w2").innerHTML="Tuition Fee : " + tutionfee;
+        document.getElementById("rf").innerHTML="";
+        document.getElementById("w3").innerHTML="Semester/ S.A $ D. Fee : " + semesterfee;
+        if(labfee!=0){
+          document.getElementById("w4").innerHTML="Laboratory Fee : " + labfee;
+        }else{
+          document.getElementById("w4").innerHTML="";
+        }
+        document.getElementById("w5").innerHTML="Library Semester Fee : " + libraryfee;
+        document.getElementById("w6").innerHTML="Total Amount Payable : " + total;
+        document.getElementById("ttl").scrollIntoView({behavior: 'smooth'});
+        // display for no retake
+      }
+    }
+    
+  }
+  </script>
+
+
+
+
+
+
+
+<footer>
+  <a class="cop" href="https://cse-asif.github.io/asif"  target="_blank" class="w3-hover-opacity">©2023 Asif. All rights reserved.</a>
+</footer>
+</body>
+</html>
